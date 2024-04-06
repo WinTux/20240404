@@ -26,9 +26,27 @@ namespace _20240404
             var horero = GetManecillaHora(tiempoActual, radioCirculo, centroReloj);
             canvas.DrawLine(centroReloj, horero);
             var minutero = GetManecillaMinuto(tiempoActual, radioCirculo, centroReloj);
-            canvas.DrawLine(centroReloj, horero);
+            canvas.DrawLine(centroReloj, minutero);
             var segundero = GetManecillaSegundo(tiempoActual, radioCirculo, centroReloj);
-            canvas.DrawLine(centroReloj, horero);
+            canvas.DrawLine(centroReloj, segundero);
+        }
+
+        private PointF GetManecillaSegundo(DateTime tiempoActual, int radioCirculo, PointF centroReloj)
+        {
+            int segundoActual = tiempoActual.Second;
+            var anguloGrad = segundoActual * 360 / 60;
+            var anguloRad = Math.PI / 180.0 * anguloGrad;
+            PointF extremomanecilla = new PointF((float)(radioCirculo * Math.Sin(anguloRad)) + centroReloj.X, (float)(-radioCirculo * Math.Cos(anguloRad)) + centroReloj.Y);
+            return extremomanecilla;
+        }
+
+        private PointF GetManecillaMinuto(DateTime tiempoActual, int radioCirculo, PointF centroReloj)
+        {
+            int minutoActual = tiempoActual.Minute;
+            var anguloGrad = minutoActual * 360 / 60;
+            var anguloRad = Math.PI / 180.0 * anguloGrad;
+            PointF extremomanecilla = new PointF((float)(radioCirculo * Math.Sin(anguloRad)) + centroReloj.X, (float)(-radioCirculo * Math.Cos(anguloRad)) + centroReloj.Y);
+            return extremomanecilla;
         }
 
         private PointF GetManecillaHora(DateTime tiempoActual, int radioCirculo, PointF centroReloj)
@@ -37,7 +55,9 @@ namespace _20240404
             if(horaActual>12) horaActual -= 12;
             var anguloGrad = horaActual * 360 / 12;
             var anguloRad = Math.PI / 180.0 * anguloGrad;
-            //Longitud de la manecilla y demas...
+            var horerolongitud = radioCirculo * 0.8;
+            PointF extremomanecilla = new PointF((float)(horerolongitud * Math.Sin(anguloRad)) + centroReloj.X, (float)(-horerolongitud * Math.Cos(anguloRad)) + centroReloj.Y);
+            return extremomanecilla;
         }
     }
 }

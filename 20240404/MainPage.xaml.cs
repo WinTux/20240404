@@ -1,4 +1,6 @@
-﻿namespace _20240404
+﻿using System.Timers;
+
+namespace _20240404
 {
     public partial class MainPage : ContentPage
     {
@@ -7,18 +9,15 @@
         public MainPage()
         {
             InitializeComponent();
+            var temporizador = new System.Timers.Timer(1000);
+            temporizador.Elapsed += new System.Timers.ElapsedEventHandler(RedibujarRelor);
+            temporizador.Start();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void RedibujarRelor(object? sender, ElapsedEventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            var graficosView = this.relojGraphicsView;
+            graficosView.Invalidate();
         }
     }
 
