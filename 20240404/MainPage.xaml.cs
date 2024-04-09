@@ -1,4 +1,5 @@
-﻿using System.Timers;
+﻿using _20240404.Pages;
+using System.Timers;
 
 namespace _20240404
 {
@@ -9,15 +10,13 @@ namespace _20240404
         public MainPage()
         {
             InitializeComponent();
-            var temporizador = new System.Timers.Timer(1000);
-            temporizador.Elapsed += new System.Timers.ElapsedEventHandler(RedibujarRelor);
-            temporizador.Start();
+            
         }
 
-        private void RedibujarRelor(object? sender, ElapsedEventArgs e)
+        async void Onejemplo1Clicked(object sender, EventArgs e)
         {
-            var graficosView = this.relojGraphicsView;
-            graficosView.Invalidate();
+            // Al darle clic se espera que se llame a la page reoloj correspondiente
+            await Shell.Current.GoToAsync(nameof(reloj));
         }
     }
 

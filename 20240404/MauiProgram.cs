@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using _20240404.Pages;
+using Microsoft.Extensions.Logging;
+using ZXing.Net.Maui;
 
 namespace _20240404
 {
@@ -14,9 +16,12 @@ namespace _20240404
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            builder.UseMauiApp<App>().UseBarcodeReader();
+            builder.Services.AddTransient<reloj>();
+            builder.Services.AddTransient<EjemploQRPage>();
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
