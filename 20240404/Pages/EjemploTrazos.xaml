@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctool="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="_20240404.Pages.EjemploTrazos"
+             Title="Ejemplo para trazos">
+    <VerticalStackLayout>
+        <ctool:DrawingView x:Name="lienzo" 
+                           BackgroundColor="#A9EBE7" 
+                           WidthRequest="300" 
+                           HeightRequest="300" 
+                           HorizontalOptions="Center"
+                           IsMultiLineModeEnabled="True" LineColor="#FF0707" LineWidth="15"
+                           DrawingLineCompleted="OnLineaDibujada"
+                           />
+        <Image x:Name="imagen" HeightRequest="200" HorizontalOptions="Center" />
+        <Button Text="" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,4 +1,5 @@
 ﻿using _20240404.Pages;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using ZXing.Net.Maui;
 
@@ -11,6 +12,7 @@ namespace _20240404
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -28,6 +30,7 @@ namespace _20240404
 
             builder.Services.AddTransient<reloj>();
             builder.Services.AddTransient<EjemploQRPage>();
+            builder.Services.AddTransient<EjemploTrazos>();
 
 #if DEBUG
             builder.Logging.AddDebug();
