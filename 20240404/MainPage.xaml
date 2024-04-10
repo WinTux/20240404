@@ -14,6 +14,11 @@
                 Text="Reloj" 
                 Clicked="Onejemplo1Clicked"
                 HorizontalOptions="Fill" />
+            <Button
+    x:Name="ejemplo2"
+    Text="Codigo QR" 
+    Clicked="Onejemplo2Clicked"
+    HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

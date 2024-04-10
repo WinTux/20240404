@@ -16,7 +16,16 @@ namespace _20240404
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-            builder.UseMauiApp<App>().UseBarcodeReader();
+            builder.UseMauiApp<App>().UseBarcodeReader()
+                .ConfigureMauiHandlers(h => {
+                    h.AddHandler(typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView),
+                        typeof(CameraBarcodeReaderViewHandler));
+                    h.AddHandler(typeof(ZXing.Net.Maui.Controls.CameraView),
+                        typeof(CameraViewHandler));
+                    h.AddHandler(typeof(ZXing.Net.Maui.Controls.BarcodeGeneratorView),
+                        typeof(BarcodeGeneratorViewHandler));
+                });
+
             builder.Services.AddTransient<reloj>();
             builder.Services.AddTransient<EjemploQRPage>();
 
