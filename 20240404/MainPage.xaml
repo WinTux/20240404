@@ -23,6 +23,11 @@
                 Text="Trazos" 
                 Clicked="Onejemplo3Clicked"
                 HorizontalOptions="Fill" />
+            <Button
+    x:Name="ejemplo4"
+    Text="Mapa" 
+    Clicked="Onejemplo4Clicked"
+    HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

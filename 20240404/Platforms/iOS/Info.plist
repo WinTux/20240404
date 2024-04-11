@@ -29,6 +29,10 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
   <key>NSCameraUsageDescription</key>
-  <string>This app uses barcode scanning to...</string>
+  <string>Esta app quiere usar tu camara para escaneo de codigos</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>Esta app quiere usar tu ubicacion en todo momento</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>Esta app quiere usar tu ubicacion al estar abierta</string>
 </dict>
 </plist>

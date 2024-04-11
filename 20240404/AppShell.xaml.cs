@@ -10,6 +10,7 @@ namespace _20240404
             Routing.RegisterRoute(nameof(reloj), typeof(reloj));
             Routing.RegisterRoute(nameof(EjemploQRPage), typeof(EjemploQRPage));
             Routing.RegisterRoute(nameof(EjemploTrazos), typeof(EjemploTrazos));
+            Routing.RegisterRoute(nameof(EjemploMapasPage), typeof(EjemploMapasPage));
         }
     }
 }

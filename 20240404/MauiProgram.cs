@@ -13,6 +13,7 @@ namespace _20240404
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseMauiMaps()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -31,6 +32,7 @@ namespace _20240404
             builder.Services.AddTransient<reloj>();
             builder.Services.AddTransient<EjemploQRPage>();
             builder.Services.AddTransient<EjemploTrazos>();
+            builder.Services.AddTransient<EjemploMapasPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
