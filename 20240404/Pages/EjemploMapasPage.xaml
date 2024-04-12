@@ -6,7 +6,129 @@
              x:Class="_20240404.Pages.EjemploMapasPage"
              Title="EjemploMapasPage">
     <Grid>
-        <mapa:Map x:Name="mimapa" IsShowingUser="True" IsTrafficEnabled="True"
-                  IsScrollEnabled="True" IsZoomEnabled="True"></mapa:Map>
+        <mapa:Map x:Name="mimapa" IsShowingUser="True" IsTrafficEnabled="False"
+                  IsScrollEnabled="True" IsZoomEnabled="True" MapType="Street" MapClicked="OnMapaClic">
+            <x:Arguments>
+                <mapa:MapSpan>
+                    <x:Arguments>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.508975107486282</x:Double>
+                                <x:Double>-68.12637026337167</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <x:Double>0.01</x:Double>
+                        <x:Double>0.01</x:Double>
+                    </x:Arguments>
+                </mapa:MapSpan>
+            </x:Arguments>
+            <mapa:Map.Pins>
+                <mapa:Pin Type="Place" Address="Avenida 16 de Julio" Label="Prado paceño">
+                    <mapa:Pin.Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50230038611906</x:Double>
+                                <x:Double>-68.13253709241955</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                    </mapa:Pin.Location>
+                </mapa:Pin>
+            </mapa:Map.Pins>
+            <mapa:Map.MapElements>
+                <mapa:Polygon StrokeColor="Blue" StrokeWidth="7" FillColor="#7FFF0000">
+                    <mapa:Polygon.Geopath>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501663061338945</x:Double>
+                                <x:Double>-68.13299171636325</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501793139413145</x:Double>
+                                <x:Double>-68.1329174133057</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50200745745226</x:Double>
+                                <x:Double>-68.1332541648875</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50189047165248</x:Double>
+                                <x:Double>-68.13332932393621</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                    </mapa:Polygon.Geopath>
+                </mapa:Polygon>
+                <mapa:Polyline StrokeColor="Tomato" StrokeWidth="12">
+                    <mapa:Polyline.Geopath>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50167730044782</x:Double>
+                                <x:Double>-68.13281430461348</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.504023414872844</x:Double>
+                                <x:Double>-68.13121243520445</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.504352848016055</x:Double>
+                                <x:Double>-68.13130065409943</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.504432980376524</x:Double>
+                                <x:Double>-68.13097563711638</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50604897470728</x:Double>
+                                <x:Double>-68.1291694713074</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.508234774782565</x:Double>
+                                <x:Double>-68.12686185069478</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.510104482305337</x:Double>
+                                <x:Double>-68.12524605197702</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                    </mapa:Polyline.Geopath>
+                </mapa:Polyline>
+                <mapa:Circle StrokeColor="Tomato" StrokeWidth="12" FillColor="#66FF88AB">
+                    <mapa:Circle.Center>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50318350828534</x:Double>
+                                <x:Double>-68.13298244196788</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                    </mapa:Circle.Center>
+                    <mapa:Circle.Radius>
+                        <mapa:Distance>
+                            <x:Arguments>
+                                <x:Double>
+                                    300
+                                </x:Double>
+                            </x:Arguments>
+                        </mapa:Distance>
+                    </mapa:Circle.Radius>
+                </mapa:Circle>
+            </mapa:Map.MapElements>
+        </mapa:Map>
     </Grid>
 </ContentPage>
