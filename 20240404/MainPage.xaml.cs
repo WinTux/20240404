@@ -33,6 +33,11 @@ namespace _20240404
             // Al darle clic se espera que se llame a la page reoloj correspondiente
             await Shell.Current.GoToAsync(nameof(EjemploMapasPage));
         }
+        async void Onejemplo5Clicked(object sender, EventArgs e)
+        {
+            // Al darle clic se espera que se llame a la page reoloj correspondiente
+            await Shell.Current.GoToAsync(nameof(EjemploMediaPage));
+        }
     }
 
 }

@@ -13,6 +13,7 @@ namespace _20240404
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseMauiCommunityToolkitMediaElement()
                 .UseMauiMaps()
                 .ConfigureFonts(fonts =>
                 {
@@ -33,6 +34,7 @@ namespace _20240404
             builder.Services.AddTransient<EjemploQRPage>();
             builder.Services.AddTransient<EjemploTrazos>();
             builder.Services.AddTransient<EjemploMapasPage>();
+            builder.Services.AddTransient<EjemploMediaPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

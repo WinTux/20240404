@@ -28,6 +28,11 @@
     Text="Mapa" 
     Clicked="Onejemplo4Clicked"
     HorizontalOptions="Fill" />
+            <Button
+x:Name="ejemplo5"
+Text="Media" 
+Clicked="Onejemplo5Clicked"
+HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

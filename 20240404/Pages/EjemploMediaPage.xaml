@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="_20240404.Pages.EjemploMediaPage"
+             Title="EjemploMediaPage">
+    <VerticalStackLayout>
+        <toolkit:MediaElement 
+            x:Name="video"
+            WidthRequest="450"
+            HeightRequest="350"
+            Source="embed://ForBiggerBlazes.mp4"
+            ShouldAutoPlay="False"
+            ShouldKeepScreenOn="True"
+            ShouldLoopPlayback="True"
+            ShouldShowPlaybackControls="True"
+            Aspect="Fill"
+            />
+        <Button x:Name="btn" Text="Play/Pause" Clicked="OnPlayClic" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
